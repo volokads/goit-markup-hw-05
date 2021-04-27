@@ -12,7 +12,6 @@ body{
     --headers-font-color: #212121;
     --text-font-color:  #757575;
     --other-fonts: #2196F3;
-    --buttons-hover-color: #2196F3;
     --white-main-and-other: #fff;
     --svg-icons:#AFB1B8;
     --grey-background: #F5F4FA;
@@ -68,8 +67,6 @@ ul {
     margin-bottom: 10px;
     color: var(--headers-font-color);
 }
-
-
 .page-header{
     padding-top: 15px;
     padding-bottom: 15px;
@@ -104,7 +101,10 @@ ul {
 }
 .nav-list li:not(:last-child) {
     margin-right: 50px;
-  }
+}
+.nav-list .current{
+    color: var(--other-fonts);
+}
 .nav-list a{
     display: inline-block;
 
@@ -113,6 +113,7 @@ ul {
     color: var(--headers-font-color);
     text-decoration: none;
 }
+
 .our-contacts {
     display: flex;
     align-items: center;
@@ -204,7 +205,7 @@ ul {
 
     color: var(--white-main-and-other);
     cursor: pointer;
-    background: var(--buttons-hover-color);
+    background: var(--other-fonts);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 }
@@ -316,7 +317,7 @@ margin-right: 10px;
 }
 .socials-links:hover,
 .socials-links:focus{
-background-color: var(--buttons-hover-color);
+background-color: var(--other-fonts);
 }
 .socials-links:hover .socials-icons,
 .socials-links:focus .socials-icons{
@@ -346,13 +347,13 @@ background-color: var(--buttons-hover-color);
 }
 .clients-link:hover,
 .clients-link:focus{
-    border: 1px solid var(--buttons-hover-color);
+    border: 1px solid var(--other-fonts);
     box-sizing: border-box;
     border-radius: 4px;
 } 
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon{
-    fill: var(--buttons-hover-color);
+    fill: var(--other-fonts);
 }
 .footer{
     display: flex;
@@ -397,7 +398,7 @@ background-color: var(--buttons-hover-color);
 }
 .footer-contacts:hover,
 .footer-contacts:focus{
-    color: var(--buttons-hover-color);
+    color: var(--other-fonts);
     cursor: pointer;
 }
 footer{
@@ -436,7 +437,7 @@ footer{
 }
 .footer-socials-links:hover,
 .footer-socials-links:focus{
-    background-color: var(--buttons-hover-color);
+    background-color: var(--other-fonts);
 }
 .footer-socials-icons{
     width: 20px;
@@ -473,7 +474,7 @@ footer{
 .buttons:hover,
 .buttons:focus{
     color: var(--white-main-and-other);
-    background-color: var(--buttons-hover-color);
+    background-color: var(--other-fonts);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
     cursor: pointer;
@@ -495,7 +496,8 @@ footer{
     cursor: pointer;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.item-portfolio:hover .portfolio-overlay{
+.item-portfolio:hover .portfolio-overlay,
+.item-portfolio:focus .portfolio-overlay{
     transform: translatey(0);
     transition-duration: 250ms;
     transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
