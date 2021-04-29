@@ -105,6 +105,18 @@ ul {
 .nav-list .current{
     color: var(--other-fonts);
 }
+.nav-list .current::after{
+    content: "";
+    display: block;
+    position: relative;
+    /* margin-top: 26px; */
+    /* margin-bottom: -26px; */
+    bottom: -26px;
+    width: 100%;
+    height: 4px;
+    background: #2196F3;
+    border-radius: 2px;
+}
 .nav-list a{
     display: inline-block;
 
@@ -112,6 +124,10 @@ ul {
     line-height: 1.14;
     color: var(--headers-font-color);
     text-decoration: none;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-delay: cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .our-contacts {
@@ -124,6 +140,10 @@ ul {
     letter-spacing: 0.02em;
     text-decoration: none;
     color: var(--text-font-color);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hdr-mail{
     margin-right: 50px;
@@ -133,13 +153,16 @@ ul {
 .our-contacts:hover,
 .our-contacts:focus{
     color: var(--other-fonts);
-    transition-duration: 250ms;
-    transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .contacts-icon{
     display: inline-block;
     margin-right: 10px;
     fill: var(--text-font-color) ;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-delay: cubic-bezier(0.4, 0, 0.2, 1); ;
 }
 .our-contacts:focus .contacts-icon,
 .our-contacts:hover .contacts-icon{
@@ -227,8 +250,8 @@ ul {
     border-radius: 4px;
 }
 .preferenses-icons{
-width: 70px;
-height: 70px;
+    width: 70px;
+    height: 70px;
 }
 .preferenses-list h3{
     font-weight: 700;
@@ -314,6 +337,10 @@ margin-right: 10px;
     width: 44px;
     height: 44px;
     border-radius: 50%;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-delay: cubic-bezier(0.4, 0, 0.2, 1); ;
 }
 .socials-links:hover,
 .socials-links:focus{
@@ -327,6 +354,10 @@ background-color: var(--other-fonts);
     width: 20px;
     height: 20px;
     fill: var(--svg-icons);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-delay: cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .clients{
     display: flex;  
@@ -340,6 +371,10 @@ background-color: var(--other-fonts);
     border: 1px solid var(--svg-icons);
     box-sizing: border-box;
     border-radius: 4px;
+
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-delay: cubic-bezier(0.4, 0, 0.2, 1); ;
     
 }
 .clients-list:not(:last-child){
@@ -372,6 +407,10 @@ background-color: var(--other-fonts);
 }
 .clients-icon{
     fill: var(--svg-icons);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-delay: cubic-bezier(0.4, 0, 0.2, 1);;
 }
 .foot-address{
     display: flex;
@@ -395,6 +434,10 @@ background-color: var(--other-fonts);
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     font-style: normal;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-delay: cubic-bezier(0.4, 0, 0.2, 1);;
 }
 .footer-contacts:hover,
 .footer-contacts:focus{
@@ -434,6 +477,10 @@ footer{
     height: 44px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-socials-links:hover,
 .footer-socials-links:focus{
@@ -470,6 +517,11 @@ footer{
     line-height: 1.63;
     text-align: center;
     color: var(--headers-font-color);
+
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .buttons:hover,
 .buttons:focus{
@@ -477,7 +529,7 @@ footer{
     background-color: var(--other-fonts);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
  .examples{
@@ -487,29 +539,38 @@ footer{
     margin-left: -30px;
 } 
 .item-portfolio{
-    position: relative;
     margin-top: 30px;
     margin-left: 30px;
     overflow: hidden;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .item-portfolio:hover{
     cursor: pointer;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.overlay-group{
+    position: relative;
+    max-width: 100%;
+    max-height: 294px;
+}
 .item-portfolio:hover .portfolio-overlay,
 .item-portfolio:focus .portfolio-overlay{
     transform: translatey(0);
-    transition-duration: 250ms;
-    transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-overlay{
     position: absolute;
-    height: 294px;
+    height: 100%;
     width: 100%;
     background: rgba(33, 150, 243, 0.9);;
     z-index: 1;
     top: 0;
-    transform: translatey(138%);
+    transition-property: transform;
+    transform: translatey(100%);
+    transition-duration: 250ms;
+    transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .pf-overlay-txt{
 
@@ -525,6 +586,8 @@ footer{
     flex-direction: column;
 }
 .boxes{
+    position: relative;
+    z-index: 5;
     padding: 20px 24px;
     background: var(--white-main-and-other);
     border: 1px solid #EEEEEE;
